@@ -421,7 +421,6 @@ small {
         padding: 1rem 0;
     }
     header p + p {
-        column-count: 2;
         padding: 1rem 0;
     }
     a#home {
