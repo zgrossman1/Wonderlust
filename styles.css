@@ -264,15 +264,17 @@ label, input, legend, select {
     padding: .5rem;
 }
 .sr-only {
-    background: var(--sunset-orange);
-    height: 1rem;
-    padding: 1.5rem;
     position: absolute;
-    transform: translateX(-250%);
-    transition: transform 0.3s;
+    left: -9999px;
+    top: auto;
 }
+
 .sr-only:focus {
-    transform: translateX(0%);
+    left: 0;
+    top: 0;
+    background: var(--sunset-orange);
+    padding: 1rem;
+    z-index: 1000;
 }
 footer {
     background-color: var(--deep-navy);
@@ -450,7 +452,7 @@ small {
     }
     #intro {
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr;
     }
     #intro p {
         font-size: 1.4em;
