@@ -32,6 +32,7 @@
             <li><a href="#">Inspirations</a></li>
             <li><a href="#">Special</a></li>
             <li><a href="#">Contact Us</a></li>
+            <li><a href="#contact-us">Contact Us</a></li>
         </ul>
     </nav>
     <main id="main-content">
@@ -253,43 +254,44 @@
     </main>
     <footer>
         <section id="contact-us">
-            Contact Us <span id="required">(*required)</span>
+               <h2>Contact Us <span id="required">(*required)</span></h2>
             
+               <form>
                 <div>
-                    <label>First Name<span>*</span></label>
-                    <input>
+                    <label for="first-name">First Name<span>*</span></label>
+                    <input type="text" id="first-name" name="first-name" required>
                 </div>
                 <div>
-                    <label>Last Name<span>*</span></label>
-                    <input>
+                    <label for="last-name">Last Name<span>*</span></label>
+                    <input type="text" id="last-name" name="last-name" required>
                 </div>
                 <div>
-                    <label>Email<span>*</span></label>
-                    <input>
+                    <label for="email">Email<span>*</span></label>
+                    <input type="email" id="email" name="email" required>
                 </div>
                 <div>
-                    <label>Phone<span>*</span></label>
-                    <input>
+                    <label for="phone">Phone<span>*</span></label>
+                    <input type="tel" id="phone" name="phone" required>
                 </div>
                 <fieldset id="preferred-contact">
-                <legend>Preferred Contact Method<span>*</span></legend>
-                    <div> 
-                        <input>
-                        <label>Email</label>
+                    <legend>Preferred Contact Method<span>*</span></legend>
+                    <div>
+                        <input type="radio" id="contact-email" name="preferred-contact" value="email" required>
+                        <label for="contact-email">Email</label>
                     </div>
                     <div>
-                        <input>
-                        <label>Text</label>
+                        <input type="radio" id="contact-text" name="preferred-contact" value="text">
+                        <label for="contact-text">Text</label>
                     </div>
                     <div>
-                        <input>
-                        <label>Phone</label>
+                        <input type="radio" id="contact-phone" name="preferred-contact" value="phone">
+                        <label for="contact-phone">Phone</label>
                     </div>
-                </fieldset>
+            </fieldset>
                 <fieldset id="destination">
                     <legend>Destination<span>*</span></legend>
-                    <select id="select-destination">
-                        <option>Choose</option>
+                    <select id="select-destination" name="destination" required>
+                        <option value="">Choose</option>
                         <option>Barcelona</option>
                         <option>Granada</option>
                         <option>Ibiza</option>
@@ -303,8 +305,8 @@
                 </fieldset>
                 <fieldset id="travelTime">
                     <legend>Travel Time<span>*</span></legend>
-                    <select id="select-travel-time">
-                        <option>Choose</option>
+                    <select id="select-travel-time" name="travel-time" required>
+                        <option value="">Choose</option>
                         <option>Fall</option>
                         <option>Winter</option>
                         <option>Spring</option>
@@ -312,8 +314,8 @@
                         <option>Flexible</option>
                     </select>
                 </fieldset>
-                <input>
-            
+                <input type="submit" id="submit" value="Submit">
+            </form>
         </section>
         <section id="legal">
             <h2>Legal</h2>
