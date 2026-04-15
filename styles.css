@@ -487,8 +487,7 @@ small {
         margin: 0 auto;
     }
     #intro {
-        display: grid;
-        grid-template-columns: 1fr;
+        display: block;
     }
     #intro img, #intro small {
         text-align: center;
